@@ -1,0 +1,343 @@
+{
+  "$defs": {
+    "Measure": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "order": {
+          "minimum": 1,
+          "title": "Order",
+          "type": "integer"
+        },
+        "start_tick": {
+          "minimum": 0,
+          "title": "Start Tick",
+          "type": "integer"
+        },
+        "duration_ticks": {
+          "exclusiveMinimum": 0,
+          "title": "Duration Ticks",
+          "type": "integer"
+        },
+        "chord": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chord"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/MusicEvent"
+          },
+          "minItems": 1,
+          "title": "Events",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "order",
+        "start_tick",
+        "duration_ticks",
+        "events"
+      ],
+      "title": "Measure",
+      "type": "object"
+    },
+    "MusicEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "note",
+            "rest"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "voice": {
+          "enum": [
+            "melody",
+            "accompaniment"
+          ],
+          "title": "Voice",
+          "type": "string"
+        },
+        "onset_tick": {
+          "description": "Absolute position from the start of the piece",
+          "minimum": 0,
+          "title": "Onset Tick",
+          "type": "integer"
+        },
+        "duration_ticks": {
+          "exclusiveMinimum": 0,
+          "title": "Duration Ticks",
+          "type": "integer"
+        },
+        "notation_duration": {
+          "enum": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "title": "Notation Duration",
+          "type": "integer"
+        },
+        "dotted": {
+          "default": false,
+          "title": "Dotted",
+          "type": "boolean"
+        },
+        "tie": {
+          "default": "none",
+          "enum": [
+            "none",
+            "start",
+            "continue",
+            "stop"
+          ],
+          "title": "Tie",
+          "type": "string"
+        },
+        "string": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "String"
+        },
+        "fret": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fret"
+        },
+        "midi_pitch": {
+          "anyOf": [
+            {
+              "maximum": 127,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Midi Pitch"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "voice",
+        "onset_tick",
+        "duration_ticks",
+        "notation_duration"
+      ],
+      "title": "MusicEvent",
+      "type": "object"
+    },
+    "RegenerationConstraints": {
+      "additionalProperties": false,
+      "properties": {
+        "tempo_bpm": {
+          "exclusiveMinimum": 0.0,
+          "title": "Tempo Bpm",
+          "type": "number"
+        },
+        "key_signature": {
+          "minLength": 1,
+          "title": "Key Signature",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tempo_bpm",
+        "key_signature"
+      ],
+      "title": "RegenerationConstraints",
+      "type": "object"
+    },
+    "TimeSignature": {
+      "additionalProperties": false,
+      "properties": {
+        "numerator": {
+          "exclusiveMinimum": 0,
+          "title": "Numerator",
+          "type": "integer"
+        },
+        "denominator": {
+          "enum": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "title": "Denominator",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "numerator",
+        "denominator"
+      ],
+      "title": "TimeSignature",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "composition_id": {
+      "minLength": 1,
+      "title": "Composition Id",
+      "type": "string"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "origin": {
+      "enum": [
+        "diagnostic",
+        "ai"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "prompt": {
+      "minLength": 1,
+      "title": "Prompt",
+      "type": "string"
+    },
+    "generator_version": {
+      "minLength": 1,
+      "title": "Generator Version",
+      "type": "string"
+    },
+    "seed": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Seed"
+    },
+    "source_composition_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Composition Id"
+    },
+    "constraints": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/RegenerationConstraints"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "tempo_bpm": {
+      "exclusiveMinimum": 0.0,
+      "title": "Tempo Bpm",
+      "type": "number"
+    },
+    "key_signature": {
+      "minLength": 1,
+      "title": "Key Signature",
+      "type": "string"
+    },
+    "time_signature": {
+      "$ref": "#/$defs/TimeSignature"
+    },
+    "ppq": {
+      "description": "Ticks per quarter note",
+      "exclusiveMinimum": 0,
+      "title": "Ppq",
+      "type": "integer"
+    },
+    "tuning": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "description": "String number -> actual sounding MIDI pitch",
+      "title": "Tuning",
+      "type": "object"
+    },
+    "measures": {
+      "items": {
+        "$ref": "#/$defs/Measure"
+      },
+      "minItems": 1,
+      "title": "Measures",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "composition_id",
+    "title",
+    "origin",
+    "prompt",
+    "generator_version",
+    "tempo_bpm",
+    "key_signature",
+    "time_signature",
+    "ppq",
+    "tuning",
+    "measures"
+  ],
+  "title": "Composition",
+  "type": "object"
+}

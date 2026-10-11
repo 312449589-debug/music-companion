@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "composition_id": "functional-diagnostic-v1",
+  "title": "功能和声诊断：C-F-G7-C（非AI作品）",
+  "origin": "diagnostic",
+  "prompt": "固定诊断样例，只验证数据结构，不能冒充用户生成作品。",
+  "generator_version": "functional-fixture-1",
+  "tempo_bpm": 80.0,
+  "key_signature": "C major",
+  "time_signature": {
+    "numerator": 4,
+    "denominator": 4
+  },
+  "ppq": 480,
+  "tuning": {
+    "1": 64,
+    "2": 59,
+    "3": 55,
+    "4": 50,
+    "5": 45,
+    "6": 40
+  },
+  "measures": [
+    {
+      "id": "m1",
+      "order": 1,
+      "start_tick": 0,
+      "duration_ticks": 1920,
+      "chord": "C",
+      "events": [
+        {
+          "id": "b1",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 0,
+          "duration_ticks": 960,
+          "notation_duration": 2,
+          "string": 5,
+          "fret": 3,
+          "midi_pitch": 48
+        },
+        {
+          "id": "n1",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 0,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "string": 1,
+          "fret": 0,
+          "midi_pitch": 64
+        },
+        {
+          "id": "n2",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 480,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "string": 1,
+          "fret": 3,
+          "midi_pitch": 67
+        },
+        {
+          "id": "b2",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 960,
+          "duration_ticks": 960,
+          "notation_duration": 2,
+          "string": 4,
+          "fret": 2,
+          "midi_pitch": 52
+        },
+        {
+          "id": "n3",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 960,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "string": 2,
+          "fret": 1,
+          "midi_pitch": 60
+        },
+        {
+          "id": "n4",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 1440,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "string": 1,
+          "fret": 0,
+          "midi_pitch": 64
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "order": 2,
+      "start_tick": 1920,
+      "duration_ticks": 1920,
+      "chord": "F",
+      "events": [
+        {
+          "id": "b2-1",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 1920,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 4,
+          "fret": 3,
+          "midi_pitch": 53
+        },
+        {
+          "id": "b2-2",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 1920,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 3,
+          "fret": 2,
+          "midi_pitch": 57
+        },
+        {
+          "id": "n2-0",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 1920,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 1,
+          "fret": 1,
+          "midi_pitch": 65
+        },
+        {
+          "id": "n2-1",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 2400,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 1,
+          "fret": 3,
+          "midi_pitch": 67
+        },
+        {
+          "id": "n2-2",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 2880,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 1,
+          "fret": 5,
+          "midi_pitch": 69
+        },
+        {
+          "id": "n2-3",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 3360,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 1,
+          "fret": 1,
+          "midi_pitch": 65
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "order": 3,
+      "start_tick": 3840,
+      "duration_ticks": 1920,
+      "chord": "G7",
+      "events": [
+        {
+          "id": "b3-1",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 3840,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 6,
+          "fret": 3,
+          "midi_pitch": 43
+        },
+        {
+          "id": "b3-2",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 3840,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 5,
+          "fret": 2,
+          "midi_pitch": 47
+        },
+        {
+          "id": "n3-0",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 3840,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 1,
+          "fret": 3,
+          "midi_pitch": 67
+        },
+        {
+          "id": "n3-1",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 4320,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 1,
+          "fret": 1,
+          "midi_pitch": 65
+        },
+        {
+          "id": "n3-2",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 4800,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 2,
+          "fret": 3,
+          "midi_pitch": 62
+        },
+        {
+          "id": "n3-3",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 5280,
+          "duration_ticks": 480,
+          "notation_duration": 4,
+          "dotted": false,
+          "tie": "none",
+          "string": 2,
+          "fret": 0,
+          "midi_pitch": 59
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "order": 4,
+      "start_tick": 5760,
+      "duration_ticks": 1920,
+      "chord": "C",
+      "events": [
+        {
+          "id": "end-c",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 5760,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 5,
+          "fret": 3,
+          "midi_pitch": 48
+        },
+        {
+          "id": "end-e",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 5760,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 4,
+          "fret": 2,
+          "midi_pitch": 52
+        },
+        {
+          "id": "end-g",
+          "kind": "note",
+          "voice": "accompaniment",
+          "onset_tick": 5760,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 3,
+          "fret": 0,
+          "midi_pitch": 55
+        },
+        {
+          "id": "end-melody",
+          "kind": "note",
+          "voice": "melody",
+          "onset_tick": 5760,
+          "duration_ticks": 1920,
+          "notation_duration": 1,
+          "dotted": false,
+          "tie": "none",
+          "string": 2,
+          "fret": 1,
+          "midi_pitch": 60
+        }
+      ]
+    }
+  ]
+}

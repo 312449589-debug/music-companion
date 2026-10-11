@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "composition_id": "diagnostic-c-am-v1",
+  "title": "结构诊断样例：C 与 Am（非 AI 作品）",
+  "origin": "diagnostic",
+  "prompt": "固定诊断样例，只验证数据结构，不能冒充用户生成作品。",
+  "generator_version": "diagnostic-fixture-1",
+  "tempo_bpm": 80.0,
+  "key_signature": "C major",
+  "time_signature": {"numerator": 4, "denominator": 4},
+  "ppq": 480,
+  "tuning": {"1": 64, "2": 59, "3": 55, "4": 50, "5": 45, "6": 40},
+  "measures": [
+    {
+      "id": "m1", "order": 1, "start_tick": 0, "duration_ticks": 1920, "chord": "C",
+      "events": [
+        {"id": "b1", "kind": "note", "voice": "accompaniment", "onset_tick": 0, "duration_ticks": 960, "notation_duration": 2, "string": 5, "fret": 3, "midi_pitch": 48},
+        {"id": "n1", "kind": "note", "voice": "melody", "onset_tick": 0, "duration_ticks": 480, "notation_duration": 4, "string": 1, "fret": 0, "midi_pitch": 64},
+        {"id": "n2", "kind": "note", "voice": "melody", "onset_tick": 480, "duration_ticks": 480, "notation_duration": 4, "string": 1, "fret": 3, "midi_pitch": 67},
+        {"id": "b2", "kind": "note", "voice": "accompaniment", "onset_tick": 960, "duration_ticks": 960, "notation_duration": 2, "string": 4, "fret": 2, "midi_pitch": 52},
+        {"id": "n3", "kind": "note", "voice": "melody", "onset_tick": 960, "duration_ticks": 480, "notation_duration": 4, "string": 2, "fret": 1, "midi_pitch": 60},
+        {"id": "n4", "kind": "note", "voice": "melody", "onset_tick": 1440, "duration_ticks": 480, "notation_duration": 4, "string": 1, "fret": 0, "midi_pitch": 64}
+      ]
+    },
+    {
+      "id": "m2", "order": 2, "start_tick": 1920, "duration_ticks": 1920, "chord": "Am",
+      "events": [
+        {"id": "b3", "kind": "note", "voice": "accompaniment", "onset_tick": 1920, "duration_ticks": 960, "notation_duration": 2, "string": 5, "fret": 0, "midi_pitch": 45},
+        {"id": "n5", "kind": "note", "voice": "melody", "onset_tick": 1920, "duration_ticks": 480, "notation_duration": 4, "string": 2, "fret": 1, "midi_pitch": 60},
+        {"id": "n6", "kind": "note", "voice": "melody", "onset_tick": 2400, "duration_ticks": 480, "notation_duration": 4, "string": 1, "fret": 0, "midi_pitch": 64},
+        {"id": "b4", "kind": "note", "voice": "accompaniment", "onset_tick": 2880, "duration_ticks": 960, "notation_duration": 2, "string": 4, "fret": 2, "midi_pitch": 52},
+        {"id": "n7", "kind": "note", "voice": "melody", "onset_tick": 2880, "duration_ticks": 480, "notation_duration": 4, "string": 1, "fret": 0, "midi_pitch": 64},
+        {"id": "n8", "kind": "note", "voice": "melody", "onset_tick": 3360, "duration_ticks": 480, "notation_duration": 4, "string": 2, "fret": 1, "midi_pitch": 60}
+      ]
+    }
+  ]
+}

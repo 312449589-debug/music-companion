@@ -1,0 +1,17 @@
+node_modules/
+frontend/public/font/
+frontend/public/soundfont/
+.DS_Store
+.pytest_cache/
+.tools/
+runtime/diagnostics/
+runtime/ai/
+dist/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+runtime/jobs/*
+!runtime/jobs/.gitkeep
